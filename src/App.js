@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Modal from "./Modal";
+import styled from "styled-components";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const Btn = styled.button`
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: salmon;
+  border: none;
+  color: white;
+  font-size: 35px;
+  font-weight: 100;
+`;
+
+class App extends Component {
+  state = {
+    isOpen: false
+  };
+
+  open = e => {
+    this.setState({
+      isOpen: true
+    });
+  };
+
+  close = e => {
+    this.setState({
+      isOpen: false
+    });
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <Btn onClick={this.open}>open the modal</Btn>
+        <Modal isOpen={this.state.isOpen} isClosed={this.close}></Modal>
+      </div>
+    );
+  }
 }
 
 export default App;
