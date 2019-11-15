@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import styled from "styled-components";
+import longestWord from "./Extras";
 
 const Btn = styled.button`
   margin: 0 auto;
@@ -25,6 +26,7 @@ class App extends Component {
     this.setState({
       isOpen: true
     });
+    console.log(longestWord("There was once a fox"));
   };
 
   close = e => {
