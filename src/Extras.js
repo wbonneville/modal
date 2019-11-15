@@ -76,12 +76,20 @@ export function capitalizeWordsTwo(str) {
 }
 
 function ArraySum(arr) {
+  // tempArray = arr sorted lowest to highest
+  // callback function
   let tempArray = arr.sort((a, b) => {
+    // b - c would indicate highest to lowest
     return a - b;
   });
+  // largest number = last number in temp array
   let largest = tempArray.pop();
+  // number = 0...
   let number = 0;
+  // for each item (number) in temp array, add it to the number
   tempArray.forEach(item => (number += item));
+  // return largest === number
+  // if largest is === to number -- true, else, false
   return largest === number;
 }
 
