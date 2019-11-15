@@ -16,7 +16,7 @@ export default function longestWord(str) {
   return longestWord;
 }
 
-function longestWords(str) {
+export function longestWords(str) {
   // split up sentence into words
   let words = str.split(" ");
   // each word has a size
@@ -45,4 +45,21 @@ function longestWords(str) {
   }
 
   return [...max];
+}
+
+export function capitalizeWords(str) {
+  let words = str.split(" ").map(word => {
+    let firstLetter = word.slice(0, 1);
+    let rest = word.slice(1);
+    firstLetter = firstLetter.toUpperCase();
+    return `${firstLetter}${rest}`;
+  });
+  return words.join(" ");
+}
+
+export function capitalizeWordsTwo(str) {
+  let words = str.split(" ").map(word => {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+  });
+  return words.join(" ");
 }
