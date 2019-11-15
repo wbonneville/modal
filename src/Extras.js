@@ -47,19 +47,42 @@ export function longestWords(str) {
   return [...max];
 }
 
+// take str as argument
 export function capitalizeWords(str) {
+  // split string into words. loop through each word and perform given function...
   let words = str.split(" ").map(word => {
+    // use slice to access index 0 to 1 of each word
     let firstLetter = word.slice(0, 1);
+    // use slice to access rest of letters (starting from index 1)
     let rest = word.slice(1);
+    // first letter set equal to first letter set toUpperCase
     firstLetter = firstLetter.toUpperCase();
+    // concatenation -- first letter(0-1) + rest (1++)
+    // array is returned
     return `${firstLetter}${rest}`;
   });
+  // reverse of split is join. join two arrays together and space out the words with " "
   return words.join(" ");
 }
 
 export function capitalizeWordsTwo(str) {
+  // split string into words. loop through each word and perform given function...
   let words = str.split(" ").map(word => {
+    // get 0 index of word, transform it to uppercase, and then add the rest of the letters using the splice method
     return word.charAt(0).toUpperCase() + word.slice(1);
   });
+  // join the two arrays and space out the words with (" ")
   return words.join(" ");
 }
+
+function ArraySum(arr) {
+  let tempArray = arr.sort((a, b) => {
+    return a - b;
+  });
+  let largest = tempArray.pop();
+  let number = 0;
+  tempArray.forEach(item => (number += item));
+  return largest === number;
+}
+
+console.log(ArraySum([1, 3, 4]));
