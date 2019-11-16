@@ -90,7 +90,29 @@ function ArraySum(arr) {
   tempArray.forEach(item => (number += item));
   // return largest === number
   // if largest is === to number -- true, else, false
+  if (largest === number) {
+    console.log("DO NOT FEED FATTY");
+  } else {
+    console.log("It's okay to feed fatty");
+  }
   return largest === number;
 }
 
 console.log(ArraySum([1, 3, 4]));
+
+function catMeal(arr) {
+  let tempArray = arr.sort((a, b) => {
+    return a - b;
+  });
+  let meals = tempArray.pop();
+  let number = 0;
+  tempArray.forEach(item => (number += item));
+  if (meals === number) {
+    console.log("DO NOT FEED FATTY");
+  } else {
+    console.log("It's okay to feed fatty");
+  }
+  return meals === number;
+}
+
+console.log(catMeal([1, 3, 4]));
