@@ -100,19 +100,33 @@ function ArraySum(arr) {
 
 console.log(ArraySum([1, 3, 4]));
 
-function catMeal(arr) {
-  let tempArray = arr.sort((a, b) => {
-    return a - b;
-  });
-  let meals = tempArray.pop();
-  let number = 0;
-  tempArray.forEach(item => (number += item));
-  if (meals === number) {
-    console.log("DO NOT FEED FATTY");
-  } else {
-    console.log("It's okay to feed fatty");
-  }
-  return meals === number;
-}
+// take arr of numbers as argument
+function mathSequences(arr) {
+  // unique value sets
+  // a set can't contain two of the same value
+  let arith = new Set();
+  let geo = new Set();
 
-console.log(catMeal([1, 3, 4]));
+  // loop through the length of the array
+  // i set to first index of array
+  for (let i = 1; i < arr.length; i++) {
+    // let number 1 = index - previous index
+    let number1 = arr[i] - arr[i - 1];
+    // add the number to arith Set
+    arith.add(number1);
+    // let number 2 = index / previous index
+    let number2 = arr[i] / arr[i - 1];
+    // add the number to geo set
+    geo.add(number2);
+  }
+  // if the arithmetic Set only has one value, it's arithmetic
+  if (arith.size === 1) {
+    return "This set is arithmetic";
+  }
+  // if the geometric Set has only one value, it's geometric
+  if (geo.size === 1) {
+    return "This set is geometric";
+  }
+  // if the set of numbers is neither arithmetic or geometric, return -1
+  return -1;
+}
