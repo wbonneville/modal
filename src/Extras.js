@@ -130,3 +130,84 @@ function mathSequences(arr) {
   // if the set of numbers is neither arithmetic or geometric, return -1
   return -1;
 }
+
+// take celsius as argument
+function convertToF(celsius) {
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  return fahrenheit;
+}
+
+convertToF(30);
+
+function reverseString(str) {
+  var array = str.split("");
+  var reverseArray = array.reverse();
+  var joinArray = reverseArray.join("");
+  return joinArray;
+}
+
+reverseString("hello");
+
+function factorialize(num) {
+  for (var answer = 1; num > 0; num--) {
+    answer = num * answer;
+  }
+  return answer;
+}
+
+factorialize(5);
+
+function findLongestWordLength(str) {
+  let words = str.split(" ");
+  let longest = 0;
+  for (let word of words) {
+    if (word.length > longest) {
+      longest = word.length;
+    }
+  }
+  return longest;
+}
+
+findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+// find largest number out of all the arrays
+
+function largestOfFour(arr) {
+  let largest = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] > largest) {
+        largest = arr[i][j];
+      }
+    }
+  }
+  return largest;
+}
+
+largestOfFour([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1]
+]);
+
+// find largest of each array
+
+function largestOfFourTwo(arr) {
+  let largest = [0, 0, 0, 0];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] > largest[i]) {
+        largest[i] = arr[i][j];
+      }
+    }
+  }
+  return largest;
+}
+
+largestOfFourTwo([
+  [4, 5, 1, 3],
+  [13, 27, 18, 26],
+  [32, 35, 37, 39],
+  [1000, 1001, 857, 1]
+]);
