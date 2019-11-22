@@ -274,13 +274,20 @@ truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
 function findElement(arr, func) {
   let num = 0;
-  for (let i = 0; i < arr.length; i++) {
+
+  for (var i = 0; i < arr.length; i++) {
     num = arr[i];
-    return num;
+    if (func(num)) {
+      return num;
+    }
   }
-  if (func(num)) {
-    return num;
-  }
+
+  return undefined;
+}
+findElement([1, 2, 3, 4], num => num % 2 === 0);
+
+function booWho(bool) {
+  return bool === false || bool === true;
 }
 
-findElement([1, 2, 3, 4], num => num % 2 === 0);
+booWho(null);
