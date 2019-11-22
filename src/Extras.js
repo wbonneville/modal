@@ -228,3 +228,35 @@ export const AddFunction = () => {
     </h1>
   );
 };
+
+function confirmEnding(str, target) {
+  var end = str.substring(str.length - 1);
+  let end2 = target.substring(target.length - 1);
+  if (end === end2) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+confirmEnding("Bastian", "pedsdsdsdsdsdadsdade");
+
+function confirmEndingTwo(str, target) {
+  return str.slice(str.length - target.length) === target;
+}
+
+confirmEnding("Bastian", "n");
+
+function repeatStringNumTimes(str, num) {
+  let output = "";
+  for (let i = 0; i < num; i++) {
+    output = str + output;
+  }
+  if (num < 0) {
+    return "";
+  } else {
+    return output;
+  }
+}
+
+repeatStringNumTimes("abc", 3);
