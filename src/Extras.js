@@ -260,3 +260,14 @@ function repeatStringNumTimes(str, num) {
 }
 
 repeatStringNumTimes("abc", 3);
+
+function truncateString(str, num) {
+  if (str.length > num) {
+    var truncated = str.substring(0, num);
+    return truncated + "...";
+  } else {
+    return str;
+  }
+}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
