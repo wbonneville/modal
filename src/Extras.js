@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+
 // longestWord takes string as an argument
 export default function longestWord(str) {
   // string is split up into words
@@ -211,3 +213,18 @@ largestOfFourTwo([
   [32, 35, 37, 39],
   [1000, 1001, 857, 1]
 ]);
+
+const initialExpenses = [{ amount: 10 }, { amount: 10 }, { amount: 10 }];
+
+export const AddFunction = () => {
+  const [expenses, setExpenses] = useState(initialExpenses);
+
+  return (
+    <h1>
+      total expenses = $
+      {expenses.reduce((acc, curr) => {
+        return (acc += curr.amount);
+      }, 0)}
+    </h1>
+  );
+};

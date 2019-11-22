@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import styled from "styled-components";
+import { AddFunction } from "./Extras";
 
 const Btn = styled.button`
   margin: 0 auto;
@@ -36,6 +37,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <AddFunction />
         <Btn onClick={this.open}>open the modal</Btn>
         <Modal isOpen={this.state.isOpen} isClosed={this.close}></Modal>
       </div>
