@@ -254,16 +254,23 @@ largestOfFourTwo([
   [1000, 1001, 857, 1]
 ]);
 
+// initial expenses set to array of objects
 const initialExpenses = [{ amount: 10 }, { amount: 10 }, { amount: 10 }];
-
+// function
 export const AddFunction = () => {
+  // use state hook
+  // expenses stores state
+  // setExpenses is a function that manipulates state
   const [expenses, setExpenses] = useState(initialExpenses);
 
   return (
     <h1>
-      total expenses = $
+      total expenses = ${/* add up all amounts */}
+      {/* two arguments: accumulator and current */}
       {expenses.reduce((acc, curr) => {
-        return (acc += curr.amount);
+        // return total
+        // curr.amount selects amount object
+        return (acc = curr.amount + acc);
       }, 0)}
     </h1>
   );
