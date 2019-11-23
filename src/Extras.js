@@ -141,9 +141,15 @@ function convertToF(celsius) {
 
 convertToF(30);
 
+// REVERSE STRING
+
+// take str as argument
 function reverseString(str) {
+  // split str into words and put it into an array
   var array = str.split("");
+  // reverse array of words
   var reverseArray = array.reverse();
+  // join the array again ([b], [a]) = to [ba]
   var joinArray = reverseArray.join("");
   return joinArray;
 }
