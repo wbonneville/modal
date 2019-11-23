@@ -254,6 +254,8 @@ largestOfFourTwo([
   [1000, 1001, 857, 1]
 ]);
 
+// USESTATE HOOK TO ADD UP VALUES IN OBJECT
+
 // initial expenses set to array of objects
 const initialExpenses = [{ amount: 10 }, { amount: 10 }, { amount: 10 }];
 // function
@@ -268,13 +270,17 @@ export const AddFunction = () => {
       total expenses = ${/* add up all amounts */}
       {/* two arguments: accumulator and current */}
       {expenses.reduce((acc, curr) => {
-        // return total
-        // curr.amount selects amount object
+        // accumulator is total returned value which is returned at the end
+        // curr is the current element being processed in the iteration
         return (acc = curr.amount + acc);
       }, 0)}
+      {/* 0 is initial value */}
+      {/* 0 could be initialValue if (let initalValue = 0) is declared above */}
     </h1>
   );
 };
+
+// CONFI
 
 function confirmEnding(str, target) {
   var end = str.substring(str.length - 1);
