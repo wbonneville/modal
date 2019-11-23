@@ -312,23 +312,38 @@ function confirmEndingTwo(str, target) {
 
 confirmEnding("Bastian", "n");
 
+// REPEAT A STRING X TIMES
+
+// two arguments: string and number
+
 function repeatStringNumTimes(str, num) {
-  let output = "";
+  // let result = empty string
+  let result = "";
+  // while i is less than the number input by the user
   for (let i = 0; i < num; i++) {
-    output = str + output;
+    // set result = to the string
+    result = str + result;
   }
+  // if the num is less than 0, return an empty string
   if (num < 0) {
     return "";
+    // otherwise, return the string
   } else {
-    return output;
+    return result;
   }
 }
 
 repeatStringNumTimes("abc", 3);
 
+// TRUNCATE (SHORTEN) A STRING
+// takes two arguments: string + number
+
 function truncateString(str, num) {
+  // if the length of the string is greater than the number that was input...
   if (str.length > num) {
+    // use substring method to return elements from index 0 to number input by user
     var truncated = str.substring(0, num);
+    // append "..." to the string
     return truncated + "...";
   } else {
     return str;
@@ -337,21 +352,34 @@ function truncateString(str, num) {
 
 truncateString("A-tisket a-tasket A green and yellow basket", 8);
 
-function findElement(arr, func) {
-  let num = 0;
+// FIND ELEMENT IN A STRING
 
+// takes an array and a function as an argument
+// return first element that passes the test
+function findElement(arr, func) {
+  // set num to zero
+  let num = 0;
+  // loop through the array
   for (var i = 0; i < arr.length; i++) {
+    // set num = to the iteration in the array
     num = arr[i];
+    // then pass that number into the function
     if (func(num)) {
+      // return that num if it can be divided by 2
+      // there can't be a remainder
       return num;
     }
   }
-
+  // if can't be divided by 2, return undefined
   return undefined;
 }
 findElement([1, 2, 3, 4], num => num % 2 === 0);
 
+// RETURN TRUE IF ARGUMENT IS A BOOLEAN
+
 function booWho(bool) {
+  // use ternary for or: ||
+  // return if bool === false or bool === true
   return bool === false || bool === true;
 }
 
