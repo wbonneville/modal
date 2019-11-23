@@ -280,21 +280,33 @@ export const AddFunction = () => {
   );
 };
 
-// CONFI
+// CONFIRM THE TARGET VALUE IS EQUAL TO THE END OF A GIVEN STR
 
+// two arguments: str and target value
 function confirmEnding(str, target) {
+  // use substring method on str to retrieve the last element in the str
   var end = str.substring(str.length - 1);
+  // get the last element of the target using the same method prescribed above
   let end2 = target.substring(target.length - 1);
+  // if the ends are congruent...
   if (end === end2) {
+    // ...return true
     return true;
+    // else return false
   } else {
     return false;
   }
 }
 
-confirmEnding("Bastian", "pedsdsdsdsdsdadsdade");
+// this should be false
+confirmEnding("Enlil", "Enki");
 
+// this should be true
+confirmEnding("Enlil", "Ninlil");
+
+// CONFIRM ENDING TWO (ONE-LINER)
 function confirmEndingTwo(str, target) {
+  // slice off ends of each string and compare them
   return str.slice(str.length - target.length) === target;
 }
 
