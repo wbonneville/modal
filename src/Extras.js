@@ -226,14 +226,21 @@ largestOfFour([
   [1000, 1001, 857, 1]
 ]);
 
-// find largest of each array
+// FIND LARGEST NUMBER FROM EACH ARRAY
 
+// take array as an argument
 function largestOfFourTwo(arr) {
+  // largest set to array full of zeros
   let largest = [0, 0, 0, 0];
+  // loop through array of arrays
   for (let i = 0; i < arr.length; i++) {
+    // loop through then numbers in each array in the array
     for (let j = 0; j < arr[i].length; j++) {
+      // if an element is larger than all of the elements inside largest
       if (arr[i][j] > largest[i]) {
+        // largest[i] = element
         largest[i] = arr[i][j];
+        // repeat
       }
     }
   }
