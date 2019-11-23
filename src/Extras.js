@@ -166,9 +166,9 @@ function factorialize(num) {
     // set answer = num * answer
     answer = num * answer;
     // if num(argument) = 10...
-    // answer = 1 * 10
-    // answer = 10 * 9
-    // answer = 90 * 8
+    // answer = 10 * 1
+    // answer = 9 * 10
+    // answer = 8 * 90
     // etc
   }
   return answer;
@@ -176,12 +176,21 @@ function factorialize(num) {
 
 factorialize(5);
 
+// FIND LENGTH OF LONGEST WORD IN A STR
+
+// take str as argument
 function findLongestWordLength(str) {
+  // split up string into words that are separated by " "
   let words = str.split(" ");
+  // baseline of longest word set to 0
   let longest = 0;
+  // for each word in words array
   for (let word of words) {
+    // if the word.length is longer than 0..
     if (word.length > longest) {
+      // set the longest word = to word.length
       longest = word.length;
+      // repeat
     }
   }
   return longest;
@@ -189,14 +198,21 @@ function findLongestWordLength(str) {
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
-// find largest number out of all the arrays
+// FIND THE LARGEST NUMBER OUT OF ALL ARRAYS
 
+// take array of arrays as an arguement
 function largestOfFour(arr) {
+  // baseline largest number = 0
   let largest = 0;
+  // loop through arrays
   for (let i = 0; i < arr.length; i++) {
+    // loop through items in each array
     for (let j = 0; j < arr[i].length; j++) {
+      // if iteration of item inside item is larger than largest (0)...
       if (arr[i][j] > largest) {
+        // ...let largest = to selected iteration of item
         largest = arr[i][j];
+        // repeat unti largest number is found
       }
     }
   }
