@@ -156,9 +156,20 @@ function reverseString(str) {
 
 reverseString("hello");
 
+// FACTORIALIZE NUMBER
+
+// take num as argument
 function factorialize(num) {
+  // while num is greater than zero
+  // loop backwards
   for (var answer = 1; num > 0; num--) {
+    // set answer = num * answer
     answer = num * answer;
+    // if num(argument) = 10...
+    // answer = 1 * 10
+    // answer = 10 * 9
+    // answer = 90 * 8
+    // etc
   }
   return answer;
 }
