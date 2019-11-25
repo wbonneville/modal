@@ -384,3 +384,24 @@ function booWho(bool) {
 }
 
 booWho(null);
+
+function titleCase(str) {
+  var convertToArray = str.toLowerCase().split(" ");
+  var result = convertToArray.map(function(val) {
+    return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
+  });
+  return result.join(" ");
+}
+
+titleCase("I'm a little tea pot");
+
+function frankenSplice(arr1, arr2, n) {
+  let array = arr2.slice();
+  for (let i = 0; i < arr1.length; i++) {
+    array.splice(n, 0, arr1[i]);
+    n++;
+  }
+  return array;
+}
+
+frankenSplice([1, 2, 3], [4, 5, 6], 1);
