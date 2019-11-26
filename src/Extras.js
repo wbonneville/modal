@@ -416,7 +416,7 @@ function bouncer(arr) {
 bouncer([7, "ate", "", false, 9]);
 
 function getIndexToIns(arr, num) {
-  arr.sort(function(a, b) {
+  arr.sort((a, b) => {
     return a - b;
   });
 
