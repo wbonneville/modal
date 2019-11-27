@@ -428,3 +428,31 @@ function getIndexToIns(arr, num) {
 }
 
 getIndexToIns([40, 60], 50);
+
+// BASIC RECURSION
+
+// takes two arguements, array and number
+function sum(arr, n) {
+  // if number is less then or equal to 0
+  if (n <= 0) {
+    // return arr[0]
+    return arr[0];
+    // else
+  } else {
+    // return function
+    // arr, number - 1 plus arr and number
+    return sum(arr, n - 1) + arr[n];
+  }
+}
+
+// RANGE OF NUMBERS WITH RECURSION
+
+function count(n) {
+  if (n === 1) {
+    return [1];
+  } else {
+    var numbers = count(n - 1);
+    numbers.push(n);
+    return numbers;
+  }
+}
