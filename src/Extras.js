@@ -445,7 +445,7 @@ function sum(arr, n) {
   }
 }
 
-// RANGE OF NUMBERS WITH RECURSION
+// RECURSION RANGE OF NUMBERS
 
 function count(n) {
   if (n === 1) {
@@ -454,5 +454,28 @@ function count(n) {
     var numbers = count(n - 1);
     numbers.push(n);
     return numbers;
+  }
+}
+
+// RECURSION RANGE OF NUMBERS
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum - startNum === 0) {
+    return [startNum];
+  } else {
+    var numbers = rangeOfNumbers(startNum, endNum - 1);
+    numbers.push(endNum);
+    return numbers;
+  }
+}
+
+// RECURSION
+
+function countdown(myArray, n) {
+  if (n <= 0) {
+    return;
+  } else {
+    myArray.push(n);
+    countdown(myArray, n - 1);
   }
 }
