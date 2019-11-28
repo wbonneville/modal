@@ -401,6 +401,8 @@ function titleCase(str) {
 
 titleCase("I'm a little tea pot");
 
+// add contents of second array to first array
+
 function frankenSplice(arr1, arr2, n) {
   let array = arr2.slice();
   for (let i = 0; i < arr1.length; i++) {
@@ -410,15 +412,24 @@ function frankenSplice(arr1, arr2, n) {
   return array;
 }
 
-frankenSplice([1, 2, 3], [4, 5, 6], 1);
+frankenSplice([1, 2, 3], [4, 5, 6], 0);
 
+// EJECT FALSE VALUES
+
+// take argument of arr
+// set new array equal to empty array
 function bouncer(arr) {
   let newArray = [];
+  // for each element in the arr...
+  // if an iteration content is true, push the iterations content into the new array
   for (var i = 0; i < arr.length; i++) {
     if (arr[i]) newArray.push(arr[i]);
   }
+  // return array
   return newArray;
 }
+// empty string is a falsey value
+// false is false
 bouncer([7, "ate", "", false, 9]);
 
 function getIndexToIns(arr, num) {
