@@ -386,8 +386,10 @@ function booWho(bool) {
 booWho(null);
 
 function titleCase(str) {
+  /// split the str into words and make them lowercase
   var convertToArray = str.toLowerCase().split(" ");
-  var result = convertToArray.map(function(val) {
+  // map over each world
+  var result = convertToArray.map(val => {
     return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
   });
   return result.join(" ");
