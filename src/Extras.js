@@ -385,13 +385,17 @@ function booWho(bool) {
 
 booWho(null);
 
+// CAPITALIZE FIRST LETTER OF EACH WORD
+
 function titleCase(str) {
   /// split the str into words and make them lowercase
   var convertToArray = str.toLowerCase().split(" ");
   // map over each world
   var result = convertToArray.map(val => {
+    // replace each words first character with the same character but uppercase
     return val.replace(val.charAt(0), val.charAt(0).toUpperCase());
   });
+  // coalesce the words into a string again
   return result.join(" ");
 }
 
