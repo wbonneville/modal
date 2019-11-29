@@ -432,23 +432,30 @@ function bouncer(arr) {
 // false is false
 bouncer([7, "ate", "", false, 9]);
 
+// INTERPOLATE AN ELEMENT
 function getIndexToIns(arr, num) {
+  // sort numbers smallest to largest
   arr.sort((a, b) => {
     return a - b;
   });
 
+  // loop over numbers
+  // if the current item of the iteration is less than or equal to the number
+  // return the index where the item would go
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] >= num) return i;
   }
-
+  // return the array
   return arr.length;
 }
 
+// in this case, 50 would belong to the first index
+// 1 is returned (40, 50, 60)
 getIndexToIns([40, 60], 50);
 
 // BASIC RECURSION
 
-// takes two arguements, array and number
+// takes two arguments, array and number
 function sum(arr, n) {
   // if number is less then or equal to 0
   if (n <= 0) {
@@ -464,27 +471,47 @@ function sum(arr, n) {
 
 // RECURSION RANGE OF NUMBERS
 
+// take number as argument
 function count(n) {
+  // baseline
+  // if number is equal to one, return 1
   if (n === 1) {
+    // return 1...
     return [1];
+    // else
   } else {
+    // set numbers = function(number - 1)
     var numbers = count(n - 1);
+    // push number into function
     numbers.push(n);
+    // function repeats until 1 is reached
     return numbers;
   }
 }
 
+// count(3) returns [1, 2, 3]
+
 // RECURSION RANGE OF NUMBERS
 
+// function takes two numbers as arguments
 function rangeOfNumbers(startNum, endNum) {
   if (endNum - startNum === 0) {
     return [startNum];
   } else {
+    // numbers = function(a, b -1)
+    // 1 is subtracted from endNum until endNum - startNum is = to 0
     var numbers = rangeOfNumbers(startNum, endNum - 1);
+    // add each new number to numbers
     numbers.push(endNum);
+    // repeat
     return numbers;
   }
 }
+
+// rangeOfNumbers(3, 6) should return [3, 4, 5, 6]
+// 3, 6 - 1 = [3], 3, 5 - 1 = [4], 4 - 1 = [3]
+// 5 and 4 and 3 and pushed to numbers. 3 - 3 = 0 -- recursion stops
+// end
 
 // RECURSION
 
