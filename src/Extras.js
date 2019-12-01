@@ -714,7 +714,7 @@ let user = {
     username: "kennethCodesAllDay",
     joinDate: "March 26, 2016",
     organization: "freeCodeCamp",
-    friends: ["Sam", "Kira", "Tomo"],
+    friends: ["Sam", "Kira", "Tomo", "Skree", "Ree"],
     location: {
       city: "San Francisco",
       state: "CA",
