@@ -654,3 +654,28 @@ function isEveryoneHere(obj) {
   }
   return false;
 }
+
+let usersObj = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+};
+
+function countOnline(usersObj) {
+  // change code below this line
+  number = 0;
+  for (let user in usersObj) {
+    if (usersObj[user].online === true) {
+      ++number;
+    }
+  }
+  return number;
+
+  // change code above this line
+}
