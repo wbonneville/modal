@@ -592,7 +592,7 @@ foods.strawberries = 27;
 
 console.log(foods);
 
-let foods = {
+let foodsTwo = {
   apples: 25,
   oranges: 32,
   plums: 28,
@@ -606,4 +606,51 @@ function checkInventory(scannedItem) {
   // change code below this line
   scannedItem = foods[scannedItem];
   return scannedItem;
+}
+
+let foodsThree = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+// one liner
+
+["oranges", "plums", "strawberries"].forEach(item => delete foods[item]);
+
+// or delete foods.oranges
+
+console.log(foods);
+
+let exist = {
+  savage: {
+    age: 4000
+  }
+};
+
+function doesThisKeyExist(obj) {
+  // change code below this line
+  if ("age" in exist.savage) {
+    return true;
+  }
+  // or
+  // exist.hasOwnProperty('age');
+  // hasOwnProperty is a method
+}
+
+console.log(doesThisKeyExist(exist));
+
+function isEveryoneHere(obj) {
+  if (
+    obj.hasOwnProperty("Alan") &&
+    obj.hasOwnProperty("Jeff") &&
+    obj.hasOwnProperty("Sarah") &&
+    obj.hasOwnProperty("Ryan")
+  ) {
+    return true;
+  }
+  return false;
 }
