@@ -746,3 +746,33 @@ for (let prop in canary) {
     ownProps.push(prop);
   }
 }
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 31;
+
+// Add your code above this line
+let beagle = new Dog("Snoopy");
+
+function Dog(name) {
+  this.name = name;
+}
+
+Dog.prototype.numLegs = 4;
+
+let beagle = new Dog("Snoopy");
+
+let ownProps = [];
+let prototypeProps = [];
+
+// Add your code below this line
+
+for (let prop in beagle) {
+  if (beagle.hasOwnProperty(prop)) {
+    ownProps.push(prop);
+  } else {
+    prototypeProps.push(prop);
+  }
+}
