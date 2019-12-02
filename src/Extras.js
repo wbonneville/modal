@@ -821,3 +821,11 @@ Dog.prototype = Object.create(Animal.prototype);
 
 let beagle = new Dog();
 beagle.eat(); // Should print "nom nom nom"
+
+// IIFE (Immediately Invoked Function Expression)
+// has no name
+// is invoked immediately
+
+(function() {
+  console.log("A cozy nest is ready");
+})();
