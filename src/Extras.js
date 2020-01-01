@@ -23,7 +23,7 @@ export function longestWords(str) {
   let words = str.split(" ");
   // each word has a size
   let size = 0;
-  // max = array with empty string
+  // current or default max = array with empty string
   let max = [""];
 
   // loop through the array of words
