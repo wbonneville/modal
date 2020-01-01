@@ -58,6 +58,7 @@ export function capitalizeWords(str) {
     let rest = word.slice(1);
     // first letter set equal to first letter set toUpperCase
     firstLetter = firstLetter.toUpperCase();
+    rest = rest.toLowerCase();
     // concatenation -- first letter(0-1) + rest (1++)
     // array is returned
     return `${firstLetter}${rest}`;
