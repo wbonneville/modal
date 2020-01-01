@@ -71,6 +71,7 @@ export function capitalizeWordsTwo(str) {
   // split string into words. loop through each word and perform given function...
   let words = str.split(" ").map(word => {
     // get 0 index of word, transform it to uppercase, and then add the rest of the letters using the splice method
+    // charAt: select a character at a given index
     return word.charAt(0).toUpperCase() + word.slice(1);
   });
   // join the two arrays and space out the words with (" ")
