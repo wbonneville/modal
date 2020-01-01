@@ -28,10 +28,9 @@ export function longestWords(str) {
 
   // loop through the array of words
   for (let i = 0; i < words.length; i++) {
-    // if first words length is greater than or equal to size...
-
+    // if first words length is greater than or equal to size (0)...
     if (words[0].length >= size) {
-      // ... size = the words length. ex. size = 5
+      // ... set size = the words length. ex. size = 5
       size = words[i].length;
       // if max is less than words length...
       if (max[max.length - 1].length < words[i].length) {
