@@ -87,6 +87,8 @@ function ArraySum(arr) {
     return a - b;
   });
   // largest number = last number in temp array
+  // in this case, the highest number
+  // pop() pops off the last index in an array
   let largest = tempArray.pop();
   // number = 0...
   let number = 0;
