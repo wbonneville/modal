@@ -198,7 +198,6 @@ function findLongestWordLength(str) {
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
 
 // FIND THE LARGEST NUMBER OUT OF ALL ARRAYS
-
 // take array of arrays as an arguement
 function largestOfFour(arr) {
   // baseline largest number = 0
