@@ -54,7 +54,7 @@ export function capitalizeWords(str) {
   let words = str.split(" ").map(word => {
     // use slice to access index 0 to 1 of each word
     let firstLetter = word.slice(0, 1);
-    // use slice to access rest of letters (starting from index 1)
+    // use slice to access rest of letters (index 1 and onwards)
     let rest = word.slice(1);
     // first letter set equal to first letter set toUpperCase
     firstLetter = firstLetter.toUpperCase();
