@@ -96,12 +96,7 @@ function ArraySum(arr) {
   tempArray.forEach(item => (number += item));
   // return largest === number
   // if largest is === to number -- true, else, false
-  if (largest === number) {
-    console.log("DO NOT FEED FATTY");
-  } else {
-    console.log("It's okay to feed fatty");
-  }
-  return largest === number;
+  return number;
 }
 
 console.log(ArraySum([1, 3, 4]));
@@ -842,3 +837,11 @@ function mutation(arr) {
   }
   return true;
 }
+
+// convert miles to kilometers
+
+function milesToKilometers(num) {
+  return num * 1.609347218694;
+}
+
+milesToKilometers(34);
