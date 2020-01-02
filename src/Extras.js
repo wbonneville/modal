@@ -302,6 +302,32 @@ confirmEnding("Enlil", "Enki");
 // this should be true
 confirmEnding("Enlil", "Ninlil");
 
+function confirmEndingAndBeginning(str, target) {
+  // use substring method on str to retrieve the last element in the str
+  var beginningStr = str.substring(0, 1);
+  var endStr = str.substring(str.length - 1);
+  // get the last element of the target using the same method prescribed above
+  var beginningStr2 = target.substring(0, 1);
+  let endStr2 = target.substring(target.length - 1);
+  // if the ends are congruent...
+  if ((beginningStr === beginningStr2) & (endStr === endStr2)) {
+    // ...return true
+    return true;
+    // else return false
+  } else {
+    return false;
+  }
+}
+
+// this should be false
+confirmEndingAndBeginning("Enlil", "Enki");
+
+// this should be false
+confirmEndingAndBeginning("Enlil", "Ninlil");
+
+// this should be true
+confirmEndingAndBeginning("Enlil", "Eral");
+
 // CONFIRM ENDING TWO (ONE-LINER)
 function confirmEndingTwo(str, target) {
   // slice off ends of each string and compare them
