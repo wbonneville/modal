@@ -871,12 +871,22 @@ function milesToKilometers(num) {
 
 milesToKilometers(34);
 
+// break up array into chunks of the size indicated within the argument
 function chunkArrayInGroups(arr, size) {
+  // empty array
   let newArr = [];
+  // loop through the length of the array
+  // i is equal to the size plus an iteration
   for (var i = 0; i < arr.length; i += size) {
+    // slice indexes off of arr from index of first iteration to indicated size and push it into newArr
     newArr.push(arr.slice(i, i + size));
   }
+  // return newArr
   return newArr;
 }
 
 chunkArrayInGroups(["a", "b", "c", "d"], 2);
+
+// should result in [[a,b], [c, d]]
+
+// chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
