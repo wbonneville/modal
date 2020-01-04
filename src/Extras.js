@@ -891,27 +891,4 @@ chunkArrayInGroups(["a", "b", "c", "d"], 2);
 
 // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
 
-const readyForBushCraft = () => {
-  const ready = "The user is ready";
-  const notReady = "The user is not ready";
-
-  let backpack = {
-    knife: true,
-    sleepingbag: true,
-    saw: true,
-    axe: true,
-    puck: true,
-    food: true
-  };
-
-  let skills = {
-    agility: 5,
-    strength: 5,
-    endurance: 10,
-    intelligence: 10
-  };
-
-  if (agility) {
-    console.log(ready);
-  }
-};
+const readyForBushCraft = () => {};
