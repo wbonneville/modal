@@ -885,7 +885,7 @@ function chunkArrayInGroups(arr, size) {
   return newArr;
 }
 
-chunkArrayInGroups(["a", "b", "c", "d"], 2);
+chunkArrayInGroups(["a", "b", "c", "d", "e", "f"], 2);
 
 // should result in [[a,b], [c, d]]
 
