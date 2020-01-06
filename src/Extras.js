@@ -969,8 +969,9 @@ var filteredList = filteredRatingList.map(itemTwo => ({
   rating: itemTwo["imdbRating"]
 }));
 
-// 2. a much better way
+// 2. another way
 
+// map through watchList and return the title and the rating
 var filteredList = watchList
   .map(movie => {
     return {
@@ -978,6 +979,8 @@ var filteredList = watchList
       rating: movie.imdbRating
     };
   })
+  // filter through the map function and return only movies with a rating above 8.0
+  // parse float turns string into number
   .filter(movie => {
     // return true it will keep the item
     // return false it will reject the item
