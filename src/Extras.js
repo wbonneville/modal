@@ -957,3 +957,29 @@ Array.prototype.myMap = function(callback) {
 var new_s = s.myMap(function(item) {
   return item * 2;
 });
+
+// FILTER A LIST, AND THEN MAP THROUGH IT
+
+// 1. Not the most optimal way
+
+var filteredRatingList = watchList.filter(item => item.imdbRating >= 8.0);
+
+var filteredList = filteredRatingList.map(itemTwo => ({
+  title: itemTwo["Title"],
+  rating: itemTwo["imdbRating"]
+}));
+
+// 2. a much better way
+
+var filteredList = watchList
+  .map(movie => {
+    return {
+      title: movie.Title,
+      rating: movie.imdbRating
+    };
+  })
+  .filter(movie => {
+    // return true it will keep the item
+    // return false it will reject the item
+    return parseFloat(movie.rating) >= 8.0;
+  });
