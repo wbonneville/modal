@@ -891,7 +891,7 @@ chunkArrayInGroups(["a", "b", "c", "d", "e", "f"], 2);
 
 // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
 
-const readyForBushCraft = () => {};
+// functional programming
 
 // fixed value is fixed
 
@@ -907,3 +907,53 @@ function incrementer() {
 
 var newValue = incrementer(); // Should equal 5
 console.log(fixedValue); // Should print 4
+
+// now pass it in as an argument
+// the global variable
+var fixedValue = 4;
+
+// Add your code below this line
+function incrementer(fixed) {
+  return fixed + 1;
+
+  // Add your code above this line
+}
+
+var newValue = incrementer(fixedValue); // Should equal 5
+console.log(fixedValue); // Should print 4
+
+// Implement map on a prototype solution 1
+
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  var newArray = [];
+  // Add your code below this line
+  this.forEach(a => newArray.push(callback(a)));
+  // Add your code above this line
+  return newArray;
+};
+
+var new_s = s.myMap(function(item) {
+  return item * 2;
+});
+
+// implement map on a prototype solution 2
+
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback) {
+  var newArray = [];
+
+  // Add your code below this line
+  for (let i = 0; i < this.length; i++) {
+    newArray.push(callback(this[i]));
+  }
+  // Add your code above this line
+
+  return newArray;
+};
+
+var new_s = s.myMap(function(item) {
+  return item * 2;
+});
