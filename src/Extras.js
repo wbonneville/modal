@@ -892,3 +892,18 @@ chunkArrayInGroups(["a", "b", "c", "d", "e", "f"], 2);
 // chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3) should return [[0, 1, 2], [3, 4, 5]].
 
 const readyForBushCraft = () => {};
+
+// fixed value is fixed
+
+// the global variable
+var fixedValue = 4;
+
+function incrementer() {
+  // Add your code below this line
+  return fixedValue + 1;
+
+  // Add your code above this line
+}
+
+var newValue = incrementer(); // Should equal 5
+console.log(fixedValue); // Should print 4
