@@ -1018,3 +1018,26 @@ function sliceArray(anim, beginSlice, endSlice) {
 }
 var inputAnim = ["Cat", "Dog", "Tiger", "Zebra", "Ant"];
 sliceArray(inputAnim, 1, 3);
+
+// Another function for slicing
+
+function nonMutatingSplice(cities) {
+  // Add your code below this line
+  return cities.slice(0, 3);
+
+  // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+nonMutatingSplice(inputCities);
+
+// function for concatenation
+
+function nonMutatingConcat(original, attach) {
+  // Add your code below this line
+  return original.concat(attach);
+
+  // Add your code above this line
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingConcat(first, second);
