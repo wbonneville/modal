@@ -1219,3 +1219,17 @@ alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
 // if (a < b) return -1;
 // else if (a > b) return 1;
 // return 0;
+
+// sort and return an array without modifying it
+
+var globalArray = [5, 6, 3, 2, 9];
+function nonMutatingSort(arr) {
+  // Add your code below this line
+  var newArr = [];
+  return arr.concat(newArr).sort(function(a, b) {
+    return a - b;
+  });
+  // Add your code above this line
+}
+
+nonMutatingSort(globalArray);
