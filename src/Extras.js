@@ -1201,3 +1201,21 @@ function getRating(watchList) {
   return averageRating;
 }
 console.log(getRating(watchList));
+
+// alphabetical order ...
+
+function alphabeticalOrder(arr) {
+  // ascending order -- a, b
+
+  return arr.sort(function(a, b) {
+    return a === b ? 0 : a > b ? 1 : -1;
+    // if a is equal to b, return 0
+    // else, if a is greater than b, return 1
+    // else, return - 1
+  });
+}
+alphabeticalOrder(["a", "d", "c", "a", "z", "g"]);
+
+// if (a < b) return -1;
+// else if (a > b) return 1;
+// return 0;
