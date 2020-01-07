@@ -1264,3 +1264,11 @@ function urlSlug(title) {
 }
 
 var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
+
+// check each element is positive
+function checkPositive(arr) {
+  // Add your code below this line
+  return arr.every(currentValue => currentValue > 0);
+  // Add your code above this line
+}
+checkPositive([1, 2, 3, -4, 5]);
