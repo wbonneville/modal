@@ -1233,3 +1233,14 @@ function nonMutatingSort(arr) {
 }
 
 nonMutatingSort(globalArray);
+
+// separate a string into words
+// join them into a string
+
+function sentensify(str) {
+  // Add your code below this line
+  var string = str.split(/\W/);
+  return string.join(" ");
+  // Add your code above this line
+}
+sentensify("May-the-force-be-with-you");
