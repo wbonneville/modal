@@ -1041,3 +1041,15 @@ function nonMutatingConcat(original, attach) {
 var first = [1, 2, 3];
 var second = [4, 5];
 nonMutatingConcat(first, second);
+
+// push, like splice, would mutate the array
+
+function nonMutatingPush(original, newItem) {
+  // push alters array
+  // return original.push(newItem);
+  // concat returns a new array!
+  return original.concat(newItem);
+}
+var first = [1, 2, 3];
+var second = [4, 5];
+nonMutatingPush(first, second);
