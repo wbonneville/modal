@@ -1244,3 +1244,23 @@ function sentensify(str) {
   // Add your code above this line
 }
 sentensify("May-the-force-be-with-you");
+
+// the global variable
+var globalTitle = "Winter Is Coming";
+
+// convert titles into acceptable slug
+function urlSlug(title) {
+  return (
+    title
+      // make it lowercase
+      .toLowerCase()
+      // trim away whitespace
+      .trim()
+      // split it into words, no white spaces
+      .split(/\s+/)
+      // join it again with dashes between words
+      .join("-")
+  );
+}
+
+var winterComing = urlSlug(globalTitle); // Should be "winter-is-coming"
