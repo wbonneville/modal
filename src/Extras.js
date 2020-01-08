@@ -1289,7 +1289,7 @@ function add(x) {
 }
 add(10)(20)(30);
 
-// an ugly chunk of code that adds up all numbers within a range
+// a long, drawn out chunk of code that adds up all numbers within a range
 
 function sumAll(arr) {
   let iteration = arr[arr.length - 1];
@@ -1304,6 +1304,18 @@ function sumAll(arr) {
     for (let i = beginning; i >= iteration; i--) {
       sum += i;
     }
+  }
+  return sum;
+}
+
+sumAll([1, 4]);
+
+// a better solution for adding up numbers within a range
+
+function sumAll(arr) {
+  var sum = 0;
+  for (var i = Math.min(...arr); i <= Math.max(...arr); i++) {
+    sum += i;
   }
   return sum;
 }
