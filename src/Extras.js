@@ -1276,3 +1276,36 @@ function checkPositive(arr) {
   return arr.some(currentValue => currentValue > 0);
 }
 checkPositive([1, 2, 3, -4, 5]);
+
+// The arity of a function is the number of arguments it requires.
+// Currying a function means to convert a function of N arity into N functions of arity 1.
+
+function add(x) {
+  return function(y) {
+    return function(z) {
+      return x + y + z;
+    };
+  };
+}
+add(10)(20)(30);
+
+// an ugly chunk of code that adds up all numbers within a range
+
+function sumAll(arr) {
+  let iteration = arr[arr.length - 1];
+  let beginning = arr[0];
+  let sum = 0;
+  if (iteration > beginning) {
+    for (let i = beginning; i <= iteration; i++) {
+      sum += i;
+    }
+    return sum;
+  } else if (iteration < beginning) {
+    for (let i = beginning; i >= iteration; i--) {
+      sum += i;
+    }
+  }
+  return sum;
+}
+
+sumAll([1, 4]);
