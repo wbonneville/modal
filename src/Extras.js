@@ -1341,3 +1341,30 @@ function diffArray(arr1, arr2) {
 }
 
 diffArray([1, 2, 3, 5, 6], [1, 2, 3, 4, 5]);
+
+// destroyer function
+// my code
+
+function destroyer(arr) {
+  const valuesToRemove = [...arguments];
+
+  for (let i = 0; i < valuesToRemove.length; i++) {
+    arr = arr.filter(item => {
+      return item !== valuesToRemove[i];
+    });
+  }
+
+  console.log(arr);
+  return arr;
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+// destroyer function one liner
+// found on FCC
+
+function destroyer(arr) {
+  return arr.filter(
+    x => ![...arguments].slice(1, arguments.length).includes(x)
+  );
+}
