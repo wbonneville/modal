@@ -1362,6 +1362,7 @@ destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 
 // destroyer function one liner
 // found on FCC
+// study
 
 function destroyer(arr) {
   return arr.filter(
