@@ -1346,9 +1346,11 @@ diffArray([1, 2, 3, 5, 6], [1, 2, 3, 4, 5]);
 // my code
 
 function destroyer(arr) {
+  // spread operator to get all arguments from argument object
   const valuesToRemove = [...arguments];
-
+  // loop through arguments
   for (let i = 0; i < valuesToRemove.length; i++) {
+    // filter through arr and only return elements not equal to arguments
     arr = arr.filter(item => {
       return item !== valuesToRemove[i];
     });
