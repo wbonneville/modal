@@ -1397,3 +1397,27 @@ function destroyer(arr) {
     item => ![...arguments].slice(1, arguments.length).includes(item)
   );
 }
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+  for (let i = 0; i < collection.length; i++) {
+    if (collection[i].last === source.last) {
+      arr.push(collection[i]);
+    }
+  }
+  console.log(arr);
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" }
+  ],
+  { last: "Capulet" }
+);
