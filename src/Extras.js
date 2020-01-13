@@ -1387,7 +1387,11 @@ destroyer([1, 2, 3, 1, 2, 3], 2, 3);
 // study
 
 function destroyer(arr) {
+  // filter through the arr
+  // return items not equal to argument
+  // syntax: arr.includes(valueToFind[, fromIndex])
   return arr.filter(
-    x => ![...arguments].slice(1, arguments.length).includes(x)
+    // return item not equal to arguments and slice from 1 to arguments.length that include the item
+    item => ![...arguments].slice(1, arguments.length).includes(item)
   );
 }
