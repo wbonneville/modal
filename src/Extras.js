@@ -1392,6 +1392,8 @@ function destroyer(arr) {
   // syntax: arr.includes(valueToFind[, fromIndex])
   return arr.filter(
     // return item not equal to arguments and slice from 1 to arguments.length that include the item
+    // return item that is NOT...
+    // ... arguments.slice(start from index 1 to end of arguments) that includes the item
     item => ![...arguments].slice(1, arguments.length).includes(item)
   );
 }
