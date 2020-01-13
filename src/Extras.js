@@ -1334,15 +1334,23 @@ function sumAll(arr) {
 
 sumAll([1, 4]);
 
+// RETURN SYMMETRIC DIFFERENCE
 function diffArray(arr1, arr2) {
+  // initialize empty array
   var newArr = [];
-
+  // loop through the length of arr1
   for (let i = 0; i < arr1.length; i++) {
+    // check inside arr2
+    // if there is no index for the given iteration (which means it doesnt exist)...
+    // ...push the element into new arr
     if (arr2.indexOf(arr1[i]) === -1) {
       newArr.push(arr1[i]);
     }
+    // same logic, but for arr1
   }
   for (let j = 0; j < arr2.length; j++) {
+    // check if any iterations have indices inside arr1
+    // if the iterations index returned "1", it would not be pushed into new arr
     if (arr1.indexOf(arr2[j]) === -1) {
       newArr.push(arr2[j]);
     }
