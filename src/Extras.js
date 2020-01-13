@@ -1398,6 +1398,10 @@ function destroyer(arr) {
   );
 }
 
+// consider Object.entries and Object.keys
+// for loops, for of loops
+// tackle tomorrow
+
 function whatIsInAName(collection, source) {
   // What's in a name?
   var arr = [];
