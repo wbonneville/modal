@@ -1318,9 +1318,14 @@ function sumAll(arr) {
 sumAll([1, 4]);
 
 // a better solution for adding up numbers within a range
+// refactored
 
 function sumAll(arr) {
+  // initalize sum
   var sum = 0;
+  // let i = to smallest number in arr
+  // while i is less than biggest number in the array, loop through them
+  // set sum = iteration + sum
   for (var i = Math.min(...arr); i <= Math.max(...arr); i++) {
     sum += i;
   }
