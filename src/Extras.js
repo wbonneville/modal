@@ -1292,14 +1292,21 @@ add(10)(20)(30);
 // a long, drawn out chunk of code that adds up all numbers within a range
 
 function sumAll(arr) {
+  // get last argument
   let iteration = arr[arr.length - 1];
+  // get first argument
   let beginning = arr[0];
+  // initialize sum
   let sum = 0;
+  // if iteration is bigger than beginning
   if (iteration > beginning) {
+    // while beginning is less than iteration, loop through and add each beginning to sum
     for (let i = beginning; i <= iteration; i++) {
       sum += i;
     }
+    // return the total
     return sum;
+    // same as above but reverse
   } else if (iteration < beginning) {
     for (let i = beginning; i >= iteration; i--) {
       sum += i;
