@@ -1517,3 +1517,21 @@ whatIsInAName(
   ],
   { last: "Capulet" }
 );
+
+// elliots solution
+function whatIsInAName(collection, source) {
+  var originalKeys = Object.keys(source);
+  return collection.filter(item => {
+    for (let key of originalKeys) {
+      if (item[key] !== source[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
+}
+
+whatIsInAName(
+  [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
+  { apple: 1, bat: 2 }
+);
