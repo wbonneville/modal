@@ -1462,3 +1462,32 @@ whatIsInAName(
   ],
   { last: "Capulet" }
 );
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+
+  let entries = Object.entries(collection);
+  let other = Object.entries(source);
+
+  // let other = Object.entries(source)
+
+  for (const [name, item] of entries) {
+    for (const [oname, oitem] of other) {
+      if (item.length == oitem.length) {
+        arr.push(item);
+      }
+      break;
+    }
+  }
+  console.log(arr);
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName(
+  [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
+  { apple: 1, bat: 2 }
+);
