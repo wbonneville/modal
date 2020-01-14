@@ -1434,3 +1434,31 @@ whatIsInAName(
   ],
   { last: "Capulet" }
 );
+
+function whatIsInAName(collection, source) {
+  // What's in a name?
+  var arr = [];
+  // Only change code below this line
+
+  let entries = Object.entries(collection);
+  // let other = Object.entries(source)
+
+  for (const [name, item] of entries) {
+    if (item === source) {
+      arr.push(item);
+    }
+    console.log(arr);
+  }
+
+  // Only change code above this line
+  return arr;
+}
+
+whatIsInAName(
+  [
+    { first: "Romeo", last: "Montague" },
+    { first: "Mercutio", last: null },
+    { first: "Tybalt", last: "Capulet" }
+  ],
+  { last: "Capulet" }
+);
