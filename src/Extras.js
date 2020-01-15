@@ -1521,12 +1521,17 @@ whatIsInAName(
 // elliots solution
 function whatIsInAName(collection, source) {
   var originalKeys = Object.keys(source);
+  // get keys
   return collection.filter(item => {
+    // filter through collection
     for (let key of originalKeys) {
+      // for of loop to loop through keys
       if (item[key] !== source[key]) {
+        // if key of item is not equal to key of source, return false
         return false;
       }
     }
+    // return true (this should return only keys that match)
     return true;
   });
 }
