@@ -1540,3 +1540,34 @@ whatIsInAName(
   [{ apple: 1, bat: 2 }, { bat: 2 }, { apple: 1, bat: 2, cookie: 2 }],
   { apple: 1, bat: 2 }
 );
+
+// CASE-SENSITIVE REPLACE WORDS FUNCTION
+// my clunky version
+
+function myReplace(str, before, after) {
+  var newStr = str.split(" ");
+  for (let i = 0; i < newStr.length; i++) {
+    if ((newStr[i] = before)) {
+      if (before[0] === before[0].toUpperCase()) {
+        let word = after.replace(after[0], after[0].toUpperCase());
+        return str.replace(before, word);
+        break;
+      } else if ((newStr[i] = before)) {
+        return str.replace(before, after);
+        break;
+      }
+    }
+  }
+}
+
+myReplace("Let us go to the store", "store", "mall");
+
+// CASE-SENSITIVE REPLACE WORDS FUNCTION
+// way better version found in FCC comments
+
+function myReplace(str, before, after) {
+  if (before[0] === before[0].toUpperCase()) {
+    after = after.replace(after[0], after[0].toUpperCase());
+  }
+  return str.replace(before, after);
+}
