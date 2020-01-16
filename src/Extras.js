@@ -1547,12 +1547,12 @@ whatIsInAName(
 function myReplace(str, before, after) {
   var newStr = str.split(" ");
   for (let i = 0; i < newStr.length; i++) {
-    if ((newStr[i] = before)) {
+    if (newStr[i] === before) {
       if (before[0] === before[0].toUpperCase()) {
         let word = after.replace(after[0], after[0].toUpperCase());
         return str.replace(before, word);
         break;
-      } else if ((newStr[i] = before)) {
+      } else if (newStr[i] === before) {
         return str.replace(before, after);
         break;
       }
@@ -1571,3 +1571,19 @@ function myReplace(str, before, after) {
   }
   return str.replace(before, after);
 }
+
+// return array with indices of nums that add up to target
+
+function twoSums(nums, target) {
+  let number = 0;
+  let array = [];
+  for (let i = 0; i < nums.length; i++) {
+    number += nums[i];
+    array.push(nums.indexOf(nums[i]));
+    if (number === target) {
+      return array;
+    }
+  }
+}
+
+twoSums([2, 7, 11, 15], 9);
