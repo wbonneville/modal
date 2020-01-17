@@ -1575,11 +1575,18 @@ function myReplace(str, before, after) {
 // return array with indices of nums that add up to target
 
 function twoSums(nums, target) {
+  // setting number = to 0
   let number = 0;
+  // init empty array
   let array = [];
+  // loop through length of nums array
   for (let i = 0; i < nums.length; i++) {
+    // set number = to number + iteration of num
     number += nums[i];
+    // push the indices of iterations into array
     array.push(nums.indexOf(nums[i]));
+    // if number is === to target
+    // return the array and stop the loop
     if (number === target) {
       return array;
     }
@@ -1587,3 +1594,5 @@ function twoSums(nums, target) {
 }
 
 twoSums([2, 7, 11, 15], 9);
+
+// try on saturday
