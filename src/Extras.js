@@ -1595,4 +1595,4 @@ function twoSums(nums, target) {
 
 twoSums([2, 7, 11, 15], 9);
 
-// try on saturday
+// try on saturdays
