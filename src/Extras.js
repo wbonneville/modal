@@ -89,7 +89,7 @@ function ArraySum(arr) {
   // largest number = last number in temp array
   // in this case, the highest number
   // pop() pops off the last index in an array
-  let largest = tempArray.pop();
+  // let largest = tempArray.pop();
   // number = 0...
   let number = 0;
   // for each item (number) in temp array, add it to the number
@@ -148,7 +148,7 @@ function reverseString(str) {
   var array = str.split("");
   // reverse array of words
   var reverseArray = array.reverse();
-  // join the array again ([b], [a]) = to [ba]
+  // join the array again ([o], [l], [l], [e], [h]) = to ([olleh])
   var joinArray = reverseArray.join("");
   return joinArray;
 }
@@ -531,10 +531,6 @@ function rangeOfNumbers(startNum, endNum) {
     return numbers;
   }
 }
-
-
-
-
 
 // rangeOfNumbers(3, 6) should return [3, 4, 5, 6]
 // 3, 6 - 1 = [3], 3, 5 - 1 = [4], 4 - 1 = [3]
