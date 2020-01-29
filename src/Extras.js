@@ -1598,3 +1598,7 @@ twoSums([2, 7, 11, 15], 9);
 // try on saturdays
 
 // begin tomorrow
+
+function howMuchAnHour(num) {
+  return num / 2087;
+}
