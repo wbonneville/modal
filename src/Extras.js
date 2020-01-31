@@ -1280,14 +1280,36 @@ checkPositive([1, 2, 3, -4, 5]);
 // The arity of a function is the number of arguments it requires.
 // Currying a function means to convert a function of N arity into N functions of arity 1.
 
-function add(x) {
-  return function(y) {
-    return function(z) {
-      return x + y + z;
+function add(a) {
+  return function(b) {
+    return function(c) {
+      return function(d) {
+        return function(e) {
+          return function(f) {
+            return function(g) {
+              return function(h) {
+                return function(i) {
+                  return function(j) {
+                    return function(k) {
+                      return function(l) {
+                        return function(m) {
+                          return (
+                            a + b + c + d + e + f + g + h + i + j + k + l + m
+                          );
+                        };
+                      };
+                    };
+                  };
+                };
+              };
+            };
+          };
+        };
+      };
     };
   };
 }
-add(10)(20)(30);
+add(10)(20)(30)(10)(20)(30)(10)(20)(30)(10)(20)(30)(3000);
 
 // a long, drawn out chunk of code that adds up all numbers within a range
 
